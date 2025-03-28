@@ -406,8 +406,8 @@ def generateAutoriftProduct(
     SEARCHLIMITX = np.zeros(origSize,dtype=np.float32)
     SEARCHLIMITY = np.zeros(origSize,dtype=np.float32)
 
-    DX[0:Dx.shape[0],0:Dx.shape[1]] = Dx
-    DY[0:Dy.shape[0],0:Dy.shape[1]] = Dy
+    DX[0:Dx.shape[0],0:Dx.shape[1]] = Dx * scale_factor
+    DY[0:Dy.shape[0],0:Dy.shape[1]] = Dy * scale_factor
     INTERPMASK[0:InterpMask.shape[0],0:InterpMask.shape[1]] = InterpMask
     CHIPSIZEX[0:ChipSizeX.shape[0],0:ChipSizeX.shape[1]] = ChipSizeX
     SEARCHLIMITX[0:SearchLimitX.shape[0],0:SearchLimitX.shape[1]] = SearchLimitX
